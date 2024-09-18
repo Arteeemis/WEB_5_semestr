@@ -21,13 +21,13 @@
               <a href="http://127.0.0.1:8000/list/1"><img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image"></a>
             </div>
           </div>
-          <form method="POST" action="{% url 'search' %}">
-            {% csrf_token %}
+          <form method="GET" action="{% url 'search' %}">
             <div class="search-bar">
                 <img src="http://127.0.0.1:9000/lab1/search.png" alt="Search Icon" class="search-icon">
-                <input type="text" name="query" placeholder="Поиск..." class="search-input" formnovalidate>
+                <input type="text" name="query" placeholder="Поиск..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
             </div>
-          </form>
+        </form>     
           <div class="cards-container">
             {% block word_cards %}{% endblock %}
           </div>

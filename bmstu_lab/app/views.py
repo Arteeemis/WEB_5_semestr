@@ -126,9 +126,11 @@ def GetWordLists(request,id):
             return render(request, 'cart_card.html', {'data' : word_list['items']})
 
 def search(request):
-    if request.method == 'POST':
-        query = request.POST.get('query')
-        results = []
-        if query:
-            results = [word for word in words if query.lower() in word['word'].lower()]
-        return render(request, 'base_card.html', {'data': {'word_cards' : results}})
+    query = request.GET.get('query')  # Get the query from GET parameters
+    results = []
+
+    if query:
+        results = [word for word in words if query.lower() in word['word'].lower()]
+
+    return render(request, 'base_card.html', {'data': {'word_cards': results}})
+
