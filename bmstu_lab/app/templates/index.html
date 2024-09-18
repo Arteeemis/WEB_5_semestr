@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="rus">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ne_Quizlet</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  </head>
+  <body>
+    <div class="space">
+        <div class="header">
+            <a href="http://127.0.0.1:8000/" class="logo" id="logo">Q</a>
+            <a href="http://127.0.0.1:8000/" class="logo">Ne-Quizlet</a>
+        </div>
+        <div class="container">
+          <div class="center">
+            <div class="title-cart">
+              <h1 class="title">Карточки</h1>
+              <a href="http://127.0.0.1:8000/list/1"><img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image"></a>
+            </div>
+          </div>
+          <form method="POST" action="{% url 'search' %}">
+            {% csrf_token %}
+            <div class="search-bar">
+                <img src="http://127.0.0.1:9000/lab1/search.png" alt="Search Icon" class="search-icon">
+                <input type="text" name="query" placeholder="Поиск..." class="search-input" formnovalidate>
+            </div>
+          </form>
+          <div class="cards-container">
+            {% block word_cards %}{% endblock %}
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

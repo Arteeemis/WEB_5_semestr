@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block word_cards %}
+
+{% for card in data.word_cards %}
+<div class="card">
+  <div class="content">
+    <h2> {{card.word}} <span> {{card.level}} </span></h2>
+    <p>{{card.language}}</p>
+    <p id="description">{{card.description}}</p>
+    <a href="http://127.0.0.1:8000/card/{{card.id}}" id="button"><button class="button">Подробнее</button></a>
+  </div>
+  <img src="{{card.image}}" alt="Placeholder" class="card-image" id="main_card_image">
+</div>
+{% endfor %}
+{% endblock %}

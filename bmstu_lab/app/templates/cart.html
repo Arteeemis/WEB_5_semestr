@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="rus">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ne-Quizlet</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  </head>
+  <body>
+    <div class="space">
+        <div class="header">
+            <a href="http://127.0.0.1:8000/" class="logo" id="logo">Q</a>
+            <a href="http://127.0.0.1:8000/" class="logo">Ne-Quizlet</a>
+        </div>
+        <div class="container">
+            <h1 class="title" id="cart-title">Список слов</h1>
+            <select class="dropdown-select">
+                <option value="option1"><p >До: </p>19.09.24</option>
+                <option value="option2"><p>До: </p>10.10.24</option>
+                <option value="option3"><p >До: </p>05.11.24</option>
+            </select>
+            <div class="cards-container">
+                {% block cart_word_cards %}{% endblock %}
+            </div>
+    </div>
+  </body>
+</html>
