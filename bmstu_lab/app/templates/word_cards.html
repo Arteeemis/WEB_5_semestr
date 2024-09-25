@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ne_Quizlet</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="icon" href="http://127.0.0.1:9000/lab1/icons8-quizlet-32.png">
   </head>
   <body>
     <div class="space">
@@ -21,15 +22,18 @@
               <a href="http://127.0.0.1:8000/list/1"><img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image"></a>
             </div>
           </div>
-          <form method="GET" action="{% url 'search' %}">
+          <form method="GET">  <!-- Remove the action attribute -->
             <div class="search-bar">
                 <img src="http://127.0.0.1:9000/lab1/search.png" alt="Search Icon" class="search-icon">
-                <input type="text" name="query" placeholder="Поиск..." class="search-input">
-                
+                <input type="text" name="searched_word" placeholder="Поиск..." class="search-input">
             </div>
-        </form>     
-          <div class="cards-container">
-            {% block word_cards %}{% endblock %}
+          </form>
+          <div class="word-cards-container">
+            {% block word_cards %}
+            {% for card in data.word_cards %}
+              {% include 'base_card.html' with element=card %}
+            {% endfor %}
+            {% endblock %}
           </div>
         </div>
     </div>

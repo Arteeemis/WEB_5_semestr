@@ -19,12 +19,9 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('words_page/', views.words_page),
-    path('', views.GetWordCards),
-    path('card/<int:id>/', views.GetWordCard, name='card_url'),
-    path('list/<int:id>/', views.GetWordLists, name='lists_url'),
-    path('search/', views.search, name='search')
+    path('', views.GetAllWordCards),
+    path('card/<int:id>/', views.GetWordCard, name='word_card_url'),
+    path('list/<int:id>/', views.GetWordLists, name='word_list_url'),
 ]
 
 

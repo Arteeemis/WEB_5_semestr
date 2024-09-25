@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ne-Quizlet</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="icon" href="http://127.0.0.1:9000/lab1/icons8-quizlet-32.png">
   </head>
   <body>
     <div class="space">
@@ -17,8 +18,8 @@
         <div class="container">
           <div class="center">
             <div class="word-lang">
-                <h1 class="title" id="word">{{data.word}}</h1>
-                <h2 class="title" id="lang">({{data.language}})</h2>
+              <h1 class="title" id="word">{{data.word}}</h1>
+              <h2 class="title" id="lang">({{data.language}})</h2>
             </div>
           </div>
           <div class="first-layer">
@@ -36,6 +37,7 @@
                   <img src="{{data.image}}" class="card-image" id="about-image">
                 </div>
         </div>
+    </div>
     </div>
   </body>
 </html>

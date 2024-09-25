@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-words = [{
+
+
+
+word_cards = [{
           'id' : 1, 
           'word': 'Persistent', 
           'level' : 'C2',
@@ -107,30 +110,24 @@ word_lists = [
                     }]}
              ]
 
-def words_page(request):
-    return render(request, 'index.html')
+def GetAllWordCards(words_info):
+    searched_word = words_info.GET.get('searched_word')  # Get the query from GET parameters
+    found_words = []
+    if searched_word:
+        found_words = [word for word in word_cards if searched_word.lower() in word['word'].lower()]
+        return render(words_info, 'word_cards.html', {'data': {'word_cards': found_words}})
+    return render(words_info, 'word_cards.html', {'data': {'word_cards': word_cards}})
 
-def GetWordCards(request):
-    return render(request, 'base_card.html', {'data' : {
-        'word_cards' : words
-    }})
 
-def GetWordCard(request, id):
-    for word in words:
+def GetWordCard(word_card_info, id):
+    for word in word_cards:
         if word['id'] == id:
-            return render(request, 'about.html', {'data' : word})
+            return render(word_card_info, 'about_word_card.html', {'data' : word})
         
-def GetWordLists(request,id):
+def GetWordLists(word_list_info,id):
     for word_list in word_lists:
         if word_list['id'] == id:
-            return render(request, 'cart_card.html', {'data' : word_list['items']})
+            return render(word_list_info, 'word_list_card.html', {'data' : word_list['items']})
 
-def search(request):
-    query = request.GET.get('query')  # Get the query from GET parameters
-    results = []
 
-    if query:
-        results = [word for word in words if query.lower() in word['word'].lower()]
-
-    return render(request, 'base_card.html', {'data': {'word_cards': results}})
 

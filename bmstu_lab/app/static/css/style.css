@@ -110,10 +110,70 @@ body{
     width: 1480px; 
 }
 
+.word-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 440px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Change to row for horizontal cards */
+    gap: 80px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+  
+.word-card {
+    display: flex;
+    height: 465px;
+    flex-direction: column; /* Change to column for vertical cards */
+    text-align: left; /* Center items horizontally */
+    width: 440px; /* Adjust width as needed */
+    background-color: #2E3856;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: -30px;
+    
+}
+  
+.word-card-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+.word-card h2 {
+    margin:0px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: system-ui; 
+}
+
+.word-card p {
+    font-weight: lighter;
+    margin: 0px;
+    font-size: 18px;
+    color: white;
+    font-family: system-ui; 
+}
+
+.word-card h2 span { 
+    vertical-align: 4px;
+    padding: 0px 20px;
+    padding-bottom: 2px;
+    margin-left: 10px; 
+    background-color:  #FFCD1F;
+    border-radius: 60px; 
+    font-size: 24px; 
+    font-weight: bold;
+    font-family:'Segoe UI'; 
+    color:#2E3856;
+}
+
 .content {
     flex: 1;
     text-align: left;
 }
+
 .card h2 {
     margin:0px;
     color: white;
@@ -153,7 +213,8 @@ body{
 }
 
 #main_card_image {
-    width: 259px;
+    width: 440px;
+    height: 305px;
 }
 
 .button {
@@ -171,7 +232,7 @@ body{
     font-size: 32px;
     font-family: 'Segoe UI';
     font-weight: bold;
-    width: 300px;
+    width: 440px;
     height: 55px;
 }
 
@@ -185,7 +246,6 @@ body{
 }
 
 .word-lang {
-    width: 99%;
     display:flex; 
     margin-top: 60px;
 }
@@ -196,17 +256,17 @@ body{
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 0px;
+    margin-right: 0;
 }
 
 .word-class {
     text-align: left;
     margin-left: 95px;
     margin-top: -10px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     font-family: system-ui;
     font-size: 24px;
     color: #fff;
-    margin-right: 1320px;
     white-space: nowrap;
 }
 
@@ -268,7 +328,8 @@ body{
 .first-layer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
 .word-lang-again {
@@ -294,13 +355,13 @@ body{
 .parametr {
     margin-top: 5px;
     margin-bottom: 0px;
-    font-size: 27px;
+    font-size: 32px;
     font-family: system-ui;
     color: #fff;
 }
 
 #cart-image1 {
-    height: 220px;
+    height: 240px;
     width: 316px;
 }
 
