@@ -218,9 +218,8 @@ body{
 }
 
 .button {
-    
+    margin: 5px;
     margin-top: 15px;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent; /* Blue button color */
@@ -232,12 +231,17 @@ body{
     font-size: 32px;
     font-family: 'Segoe UI';
     font-weight: bold;
-    width: 440px;
+    width: 210px;
     height: 55px;
 }
 
 #button{
     text-decoration: none;
+}
+
+#add_button {
+    color:#4255FF;
+    border-color: #4255FF;
 }
 
 #word {
@@ -312,17 +316,14 @@ body{
 }
 
 .dropdown-select {
-    padding-bottom: 5px;
+    padding: 5px;
+    justify-content: center;
+    padding-bottom: 10px;
     font-family: 'Segoe UI';
     font-weight: lighter;
     text-align: center;
     font-size: 24px;
-    width: 250px;
-    background-color: transparent;
-    border-radius: 10px;
-    border: 2px solid white;
     color: white;
-    background-color: #0A092D;
 }
 
 .first-layer {
@@ -407,3 +408,10 @@ body{
     height: 50px;
 }
 
+#cart-card {
+    margin-top: 20px;
+}
+
+#delete_buuton {
+    width:350px;
+}

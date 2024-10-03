@@ -19,7 +19,7 @@
           <div class="center">
             <div class="word-lang">
               <h1 class="title" id="word">{{data.word}}</h1>
-              <h2 class="title" id="lang">({{data.language}})</h2>
+              <h2 class="title" id="lang">({{data.word_language}})</h2>
             </div>
           </div>
           <div class="first-layer">
@@ -28,13 +28,13 @@
             <div class="cards-container">
                 <div class="card">
                   <div class="content">
-                    <h2 id="lvl"><span id="level">{{data.level}}</span></h2>
-                    <p class="underline" id="description">{{data.description}}</p>
-                    <h3 class="parameter">Перевод:<span class="parameter-text">{{data.translation}}</span></h3>
-                    <h3 class="parameter">Пример:<span class="parameter-text">{{data.example}}</span></h3>
-                    <h3 class="parameter">Синонимы:<span class="parameter-text">{{data.synonyms}}</span></h3>
+                    <h2 id="lvl"><span id="level">{{data.word_level}}</span></h2>
+                    <p class="underline" id="description">{{data.word_description}}</p>
+                    <h3 class="parameter">Перевод:<span class="parameter-text">{{data.word_translation}}</span></h3>
+                    <h3 class="parameter">Пример:<span class="parameter-text">{{data.word_example}}</span></h3>
+                    <h3 class="parameter">Синонимы:<span class="parameter-text">{{data.word_synonyms}}</span></h3>
                   </div>
-                  <img src="{{data.image}}" class="card-image" id="about-image">
+                  <img src="{{data.word_image}}" class="card-image" id="about-image">
                 </div>
         </div>
     </div>

@@ -19,7 +19,7 @@
           <div class="center">
             <div class="title-cart">
               <h1 class="title">Карточки</h1>
-              <a href="http://127.0.0.1:8000/list/1"><img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image"></a>
+              <a href="{% url 'word_list_url' data.word_list_id %}"><img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image"></a>
             </div>
           </div>
           <form method="GET">  <!-- Remove the action attribute -->

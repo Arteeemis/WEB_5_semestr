@@ -19,9 +19,12 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.GetAllWordCards),
     path('card/<int:id>/', views.GetWordCard, name='word_card_url'),
     path('list/<int:id>/', views.GetWordLists, name='word_list_url'),
+    path('add_word_card_to_list/', views.add_word_card_to_list, name='add_word_card'),
+    path('delete_word_list/<int:id>', views.delete_word_list, name='delete_word_list')
 ]
 
 
