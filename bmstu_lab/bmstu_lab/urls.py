@@ -23,7 +23,7 @@ urlpatterns = [
     path('', views.GetAllWordCards),
     path('card/<int:id>/', views.GetWordCard, name='word_card_url'),
     path('list/<int:id>/', views.GetWordLists, name='word_list_url'),
-    path('add_word_card_to_list/', views.add_word_card_to_list, name='add_word_card'),
+    path('add_to_list/', views.add_to_list, name='add_to_list'),
     path('delete_word_list/<int:id>', views.delete_word_list, name='delete_word_list')
 ]
 

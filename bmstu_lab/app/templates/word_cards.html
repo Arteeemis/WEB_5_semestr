@@ -12,14 +12,19 @@
   <body>
     <div class="space">
         <div class="header">
-            <a href="http://127.0.0.1:8000/" class="logo" id="logo">Q</a>
-            <a href="http://127.0.0.1:8000/" class="logo">Ne-Quizlet</a>
+            <a href="http://127.0.0.1:8000" class="logo" id="logo">Q</a>
+            <a href="http://127.0.0.1:8000" class="logo">Ne-Quizlet</a>
         </div>
         <div class="container">
           <div class="center">
             <div class="title-cart">
-              <h1 class="title">Карточки</h1>
-              <a href="{% url 'word_list_url' data.word_list_id %}"><img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image"></a>
+              <h1 class="title" id="cartochki">Карточки</h1>
+              <a href="{% url 'word_list_url' data.word_list_id %}">
+                <img src="http://127.0.0.1:9000/lab1/cart.png" alt="cart" class="cart-image">
+                {% if data.card_count > 0 %}
+                   <p class="cart-count">В списке: {{ data.card_count }}</p>
+                {% endif %}
+              </a>
             </div>
           </div>
           <form method="GET">  <!-- Remove the action attribute -->

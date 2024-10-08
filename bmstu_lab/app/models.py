@@ -10,6 +10,7 @@ class WordLists(models.Model):
     completion_date = models.DateField(blank=True, null=True)
     creator = models.IntegerField(blank=True, null=True)
     moderator = models.IntegerField(blank=True, null=True)
+    learn_until_date = models.DateField(blank=True, null=True)
 
     class Meta:
         managed = False

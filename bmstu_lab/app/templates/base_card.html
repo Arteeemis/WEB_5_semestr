@@ -10,10 +10,10 @@
     <p>{{card.word_language}}</p>
     <div class="center">
       <a href="http://127.0.0.1:8000/card/{{card.id}}" id="button"><button class="button">Подробнее</button></a>
-      <form method="post" action="{% url 'add_word_card' %}">
+      <form method="post" action="{% url 'add_to_list' %}"> 
         {% csrf_token %}
-      <button class="button" id="add_button" name="add_button" value = "{{card.id}}">Добавить</button>
-      </form>
+        <button class="button" id="add_button" name="add_button" value="{{card.id}}">Добавить</button>
+      </form>   
     </div>
   </div>
 </div>

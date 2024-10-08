@@ -17,12 +17,23 @@
         </div>
         <div class="container">
             <h1 class="title" id="cart-title">Список слов</h1>
-            <!-- <select class="dropdown-select">
-                <option value="option1"><p >До: </p>19.09.24</option>
-                <option value="option2"><p>До: </p>10.10.24</option>
-                <option value="option3"><p >До: </p>05.11.24</option>
-            </select> -->
-            <p class = "dropdown-select"> Word List Created: {{data.creation_datetime}}</p>
+            <p class = "dropdown-select"> Выучить до: {{data.week}}</p>
+            <!-- <form method="post" action="">
+              {% csrf_token %}
+              <select class="dropdown-select" name="dates" id="drop">
+                <option value="">Выучить до:</option>
+                <option value="{{ week }}">
+                  До: {{ data.week }}
+                </option>
+                <option value="{{ month }}">
+                  До: {{ data.month }}
+                </option>
+                <option value="{{ three_months }}">
+                  До: {{ data.three_months }}
+                </option>
+              </select>
+              <button type="submit" class="dropdown-select" id="save">Сохранить</button>
+            </form> -->
             <div class="cards-container">
                 {% block cart_word_cards %}{% endblock %}
             </div>

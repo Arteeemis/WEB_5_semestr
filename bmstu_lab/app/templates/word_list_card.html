@@ -4,20 +4,21 @@
     {% for card in data.word_cards %}
       <div class="card" id="cart-card">
         <div class="content">
-          <h2 id="lvl"><span id="level">{{card.word_level}}</span></h2>
+          <h2 id="lvl"><span id="level">{{card.card.word_level}}</span></h2>
           <div class="word-lang-again">
-            <h1 class="title" id="cart-word">{{card.word}}</h1>
-            <h2 class="title" id="cart-lang">({{card.word_language}})</h2>
+            <h1 class="title" id="cart-word">{{card.card.word}}</h1>
+            <h2 class="title" id="cart-lang">({{card.card.word_language}})</h2>
             <!-- <button class="cart-button1" ><img src="http://127.0.0.1:9000/lab1/arrow_up.png" class="sort-image"></button> -->
           </div>
-          <p class="word-class">{{card.word_class}}</p>
+          <p class="word-class">{{card.card.word_class}}</p>
           <div class="button-align">
-            <h3 class="parametr">Перевод:<span class="parameter-text">{{card.word_translation}}</span></h3>
+            <h3 class="parametr">Перевод:<span class="parameter-text">{{card.card.word_translation}}</span></h3>
             <!-- <button class="cart-button2"><img src="http://127.0.0.1:9000/lab1/arrow_down.png" class="sort-image" ></button> -->
+            <span class="order">Приоритет: {{ card.order }}</span>
           </div>
-          <h3 class="parametr">Синонимы:<span class="parameter-text">{{card.word_synonyms}}</span></h3>
+          <h3 class="parametr">Синонимы:<span class="parameter-text">{{card.card.word_synonyms}}</span></h3>
         </div>
-        <img src="{{card.word_image}}" id="cart-image1">
+        <img src="{{card.card.word_image}}" id="cart-image1">
       </div>
     {% endfor %}
   </div>
