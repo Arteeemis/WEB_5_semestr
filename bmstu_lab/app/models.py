@@ -42,5 +42,6 @@ class CardsLists(models.Model):
     lists_order = models.IntegerField(blank=True, null=True, default=1)
 
     class Meta:
+        
         managed = False
         db_table = 'cards_lists'

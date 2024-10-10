@@ -323,6 +323,7 @@ body{
     font-weight: lighter;
     text-align: center;
     font-size: 24px;
+    font-weight:normal;
     color: white;
 }
 
@@ -431,9 +432,10 @@ body{
 }
 
 .order {
-    margin-top: -50px;
-    margin-left: auto;
-    margin-right: 200px;
+    margin-top: 20px;
+    /* margin-top: -50px; */
+    /* margin-left: auto; */
+    /* margin-right: 200px; */
     display: flex;
     justify-content: center;
     align-items: center;
