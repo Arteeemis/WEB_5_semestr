@@ -285,3 +285,4 @@ def update_user(request, pk):
         return Response(serializer.data, status=status.HTTP_200_OK)
     else:
         return Response('Incorrect data', status=status.HTTP_400_BAD_REQUEST)
+    

@@ -70,3 +70,4 @@ class ResolveWordList(serializers.ModelSerializer):
         model = WordLists
         fields = ['status']
 
+

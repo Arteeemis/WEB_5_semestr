@@ -63,7 +63,7 @@ class CardsLists(models.Model):
 #     class Meta:
 #         managed = False
 #         db_table = 'auth_user'
-
+#
 
 class User(models.Model):
     password = models.CharField(max_length=128)

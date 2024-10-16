@@ -43,3 +43,5 @@ def delete_pic(word_card):
     name = word_card.word
     img_obj_name = f"{name}.png"
     client.remove_object(settings.AWS_STORAGE_BUCKET_NAME, img_obj_name)
+
+    
